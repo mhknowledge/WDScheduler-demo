@@ -15,19 +15,22 @@ function showClock() {
 
 
 //code to handle schedule event input
-function scheduleEvent(event){
-    event.preventDefault();
+    // var eventItem = $('input[name="event-input"]').val();
+    var saveInput = [];
 
-    var eventItem = $('input[name="event-input"]').val();
-
-
-    //show event
-    currentEventEl.append(eventItem);
-
+    // //show event
+    // currentEventEl.append(eventItem);
+    
     var input = document.getElementById("event-input");
-localStorage.setItem('event-input', JSON.stringify(event-input));
+    $('.saveBtn').click(function () {
+    saveInput.push({
+        eventItem: "",
+        })
+        localStorage.setItem("event", JSON.stringify(saveInput));
+    });
+    
 
-}
+
 
 
 
