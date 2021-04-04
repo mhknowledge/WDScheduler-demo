@@ -37,12 +37,14 @@ function handleEventInput(event) {
         inp.value="";
     }
     
+    
     localStorage.setItem("activities", JSON.stringify(activities));
 
 }
+
 saveBtnEl.on('click', handleEventInput);
 
-//color rows
+//color code rows
 var hr = (new Date()).getHours();
 var startTime = 8;
 for (var i = 0; i <= 10; i++){
