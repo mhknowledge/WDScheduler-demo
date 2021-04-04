@@ -46,14 +46,15 @@ saveBtnEl.on('click', handleEventInput);
 
 //color code rows
 var hr = (new Date()).getHours();
+console.log(hr);
 var startTime = 8;
-for (var i = 0; i <= 10; i++){
-    var rowi = document.querySelector("#row"+i);
+for (var i = 0; i <= 12; i++){
+    var rowEl = document.querySelector("#row"+i);
     if (hr >= startTime+i && hr < startTime+i+1){
-        rowi.toggleClass('.past');
+        rowEl.toggleClass('.past');
     }else if (hr < startTime+i+1){
-        rowi.toggleClass(".present");
-    } else {rowi.toggleClass(".future");
+        rowEl.toggleClass(".present");
+    } else if (hr > startTime ) {rowEl.toggleClass(".future");
         }
 }
 
