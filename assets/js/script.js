@@ -21,6 +21,20 @@ removeBtnEl.on('click', function() {
     location.reload(".row");
 });
 
+function handleEventInput(event) {
+    //Prevent the default behavior
+    event.preventDefault();
+    console.log('Current Day: ', currentDayEl.val());
+    console.log('Current Time: ', currentTimeEl.val());
+    console.log('Scheduled: ', currentEventEl.val());
+       
+}
+saveBtnEl.on('click', handleEventInput);
+
+
+
+
+
 
 
 
