@@ -20,9 +20,17 @@ function scheduleEvent(event){
 
     var eventItem = $('input[name="event-input"]').val();
 
+
     //show event
     currentEventEl.append(eventItem);
+
+    var input = document.getElementById("event-input");
+localStorage.setItem('event-input', JSON.stringify(event-input));
+
 }
+
+
+
 
 
  
